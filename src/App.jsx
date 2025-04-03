@@ -86,8 +86,8 @@ function WeatherLookup() {
   }
 
   return (
-    <div style={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-      <div style={{ maxWidth: '50vw'}}>
+    <div style={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'center'}}>
+      <div style={{ maxWidth: '50vw', minWidth: '300px', maxHeight:'100vh'}}>
         <h2>Weather Lookup</h2>
         
         {/* Input Section */}
@@ -107,19 +107,20 @@ function WeatherLookup() {
             onChange={(e) => setCountry(e.target.value)}
             className='textInput'
           />
-          
-          <button 
-            onClick={fetchLatLon}
-            className='search-button button'
-          >
-            Search
-          </button>
-          <button 
-            onClick={clearInput}
-            className='clear-button button'
-          >
-            Clear
-          </button>
+          <div>
+            <button 
+              onClick={fetchLatLon}
+              className='search-button button'
+            >
+              Search
+            </button>
+            <button 
+              onClick={clearInput}
+              className='clear-button button'
+            >
+              Clear
+            </button>
+          </div>
         </div>
 
         {/* Error Display */}
